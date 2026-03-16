@@ -96,7 +96,9 @@ if __name__ == "__main__":
     pcd = o3d.geometry.PointCloud()
     pcd.points = o3d.utility.Vector3dVector(original_coord)
     pcd.colors = o3d.utility.Vector3dVector(original_pca_color.cpu().detach().numpy())
-    o3d.visualization.draw_geometries([pcd])
+    output_filename = "pca_result.ply"
+    o3d.io.write_point_cloud(output_filename, pcd)
+    print(f"[SUCCESS] Result saved to {output_filename}. Download this file to view it.")
     # or
     # o3d.visualization.draw_plotly([pcd])
 
