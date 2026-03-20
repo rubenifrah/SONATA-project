@@ -7,10 +7,12 @@
 #SBATCH --mem=32G
 #SBATCH --account=m25146
 #SBATCH --job-name=install_env
-#SBATCH --output=logs/install_%j.out
+#SBATCH --output=results/logs/install_%j.out
 
 echo "--- STARTING INSTALLATION ---"
-mkdir -p logs
+REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+cd "$REPO_ROOT" || exit 1
+mkdir -p results/logs
 
 # 1. Create venv
 if [ ! -d "venv" ]; then

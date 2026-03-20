@@ -1,0 +1,56 @@
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+.ipynb_checkpoints/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+pip-wheel-metadata/
+
+# Logs
+logs/
+*.log
+results/logs/
+results/**/*.log
+
+# Local data and checkpoints
+data/
+datasets/
+checkpoints/
+ckpt/
+weights/
+cache/
+.cache/
+
+# Experiment outputs
+results/*
+!results/.gitkeep
+!results/README.md
+!experiments/README.md
+
+# Upstream package cache / generated files
+sonata-article/.pytest_cache/
+sonata-article/build/
+sonata-article/dist/
+sonata-article/*.egg-info/
+
