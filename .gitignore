@@ -54,3 +54,4 @@ sonata-article/build/
 sonata-article/dist/
 sonata-article/*.egg-info/
 
+report/report.tex
